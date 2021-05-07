@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 const cors = require('cors');
+var http = require('http');
+const path = require("path");
 
 const PORT = process.env.PORT || 5000
 
@@ -15,6 +17,12 @@ app.use(express.json());
 
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, "..", "public")));
+app.set("views", path.join(__dirname, "..", "public"));
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "html");
+
+
 require('dotenv').config()
 
 //iniciando o db
@@ -25,6 +33,11 @@ mongoose.connect(
 
 requireDir('./models');
 
+
+//home
+app.get("/", (request, response) => {
+    return response.render("html/index.html");
+  });
 
 //rotas
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
