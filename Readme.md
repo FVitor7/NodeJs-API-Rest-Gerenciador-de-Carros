@@ -13,7 +13,7 @@
 
   
 
-♻️ NodeJS: API **RESTful** 🚀 com **CRUD** & **MONGODB**
+♻️ NodeJS: API **RESTful** com **CRUD** & **MONGODB**
 
 ## ✨ Clone
 ```bash
