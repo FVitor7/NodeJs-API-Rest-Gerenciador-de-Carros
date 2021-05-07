@@ -1,0 +1,175 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Gerenciador de Carros",
+      "description": "API Restful. \nBanco de Dados: MongoDB",
+      "license": {
+        "name": "Fábio Vitor",
+        "url": "https://github.com/fvitor7"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/api/v1",
+    "tags": [
+      {
+        "name": "Carros",
+        "description": "CRUD para API RESTful dos Carros no Sistema"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/carros": {
+        "post": {
+          "tags": [
+            "Carros"
+          ],
+          "description": "Criar um novo carro",
+          "parameters": [
+            {
+              "name": "user",
+              "in": "body",
+              "description": "Dados para cadastro de um novo modelo no sistema",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Carro Criado com Sucesso!",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          }
+        },
+        "get": {
+          "tags": [
+            "Carros"
+          ],
+          "summary": "Obter todos os Carros",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          }
+        }
+      },
+      "/carros/{carroId}": {
+        "parameters": [
+          {
+            "name": "carroId",
+            "in": "path",
+            "required": true,
+            "description": "ID de um Carro específico",
+            "type": "string"
+          }
+        ],
+        "get": {
+          "tags": [
+            "Carros"
+          ],
+          "summary": "  Obter um Carro pelo ID",
+          "responses": {
+            "200": {
+              "description": "Carro encontrado",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          }
+        },
+        "delete": {
+          "summary": "Deletar um Carro pelo ID",
+          "tags": [
+            "Carros"
+          ],
+          "responses": {
+            "200": {
+              "description": "Carro Deletado",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          }
+        },
+        "put": {
+          "summary": "Atualizar um Carro",
+          "tags": [
+            "Carros"
+          ],
+          "parameters": [
+            {
+              "name": "user",
+              "in": "body",
+              "description": "Atualizar o cadastro do Carro",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Carro Atualizado",
+              "schema": {
+                "$ref": "#/definitions/Carro"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Carro": {
+        "required": [
+          "Modelo",
+          "AnoModelo",
+          "Marca",
+          "Valor",
+          "Combustivel",
+          "CodigoFipe",
+          "MesReferencia"
+        ],
+        "properties": {
+          "Modelo": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "AnoModelo": {
+            "type": "string"
+          },
+          "Marca": {
+            "type": "string"
+          },
+          "Valor": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "Combustivel": {
+            "type": "string"
+          },
+          "CodigoFipe": {
+            "type": "string"
+          },
+          "MesReferencia": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
