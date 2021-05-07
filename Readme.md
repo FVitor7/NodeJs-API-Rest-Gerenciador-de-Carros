@@ -9,9 +9,11 @@
 <img  alt="Repository size"  src="https://img.shields.io/github/repo-size/fvitor7/NodeJs-API-Rest-Gerenciador-de-Carros">
 </p>
 
-## 💻 Sobre o projeto
+> Preview
 
-  
+![Alt Text](https://raw.githubusercontent.com/FVitor7/NodeJs-API-Rest-Gerenciador-de-Carros/main/.github/crud.JPG)
+
+## 💻 Sobre o projeto  
 
 ♻️ NodeJS: API **RESTful** com **CRUD** & **MONGODB**
 
