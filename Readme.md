@@ -4,9 +4,9 @@
 </h2>
 <p  align="center">
 
-<img  alt="GitHub language count"  src="https://img.shields.io/github/languages/count/fvitor7/node-api-rest?color=%2304D361">
+<img  alt="GitHub language count"  src="https://img.shields.io/github/languages/count/fvitor7/NodeJs-API-Rest-Gerenciador-de-Carros?color=%2304D361">
 
-<img  alt="Repository size"  src="https://img.shields.io/github/repo-size/douglasabnovato/node-api-rest">
+<img  alt="Repository size"  src="https://img.shields.io/github/repo-size/fvitor7/NodeJs-API-Rest-Gerenciador-de-Carros">
 </p>
 
 ## 💻 Sobre o projeto
