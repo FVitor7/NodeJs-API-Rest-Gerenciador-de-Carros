@@ -55,20 +55,10 @@ url: `http://localhost:3000/api/v1/carros/_id`
 
 - [x] listagem dos carros
 
-- [x] {{ base_url }}/api/v1/carros?page=2` : retorna a segunda página de objetos
+- [x] `{{ base_url }}/api/v1/carros?page=2` : retorna a segunda página de objetos
 
   
 
-
-
-
-## 🚀 Como executar o projeto
-
-  
-
-Podemos considerar este projeto como sendo com uma parte:
-
-1. Back end
 
   
 
