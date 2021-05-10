@@ -9,7 +9,7 @@
         "url": "https://github.com/fvitor7"
       }
     },
-    "host": "localhost:3000",
+    "host": "https://node-api-gerenciador-de-carros.herokuapp.com",
     "basePath": "/api/v1",
     "tags": [
       {
